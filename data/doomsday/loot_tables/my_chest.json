@@ -1,0 +1,142 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1, 
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air",
+          "weight": 160
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_apple",
+          "weight": 20
+        },
+        {
+        "type": "minecraft:item",
+        "name": "minecraft:potion",
+        "weight": 15,
+        "functions": [
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{CustomPotionEffects:[{Id:8,Amplifier:1,Duration:200}]}"
+          }]
+        },
+        {
+        "type": "minecraft:item",
+        "name": "minecraft:potion",
+        "weight": 10,
+        "functions": [
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{CustomPotionEffects:[{Id:11,Amplifier:3,Duration:100}]}"
+          }]
+        },
+                {
+        "type": "minecraft:item",
+        "name": "minecraft:potion",
+        "weight": 15,
+        "functions": [
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{CustomPotionEffects:[{Id:14,Amplifier:0,Duration:200}]}"
+          }]
+        },
+        
+
+        {
+        "type": "minecraft:item",
+        "name": "minecraft:potion",
+        "weight": 15,
+        "functions": [
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{CustomPotionEffects:[{Id:1,Amplifier:1,Duration:200}]}"
+          }]
+        },
+        {
+        "type": "minecraft:item",
+        "name": "minecraft:splash_potion",
+        "weight": 10,
+        "functions": [
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{CustomPotionEffects:[{Id:2,Amplifier:1,Duration:100}]}"
+          }]
+        },
+        {
+        "type": "minecraft:item",
+        "name": "minecraft:splash_potion",
+        "weight": 10,
+        "functions": [
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{CustomPotionEffects:[{Id:15,Amplifier:0,Duration:100}]}"
+          }]
+        },
+        {
+        "type": "minecraft:item",
+        "name": "minecraft:splash_potion",
+        "weight": 10,
+        "functions": [
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{CustomPotionEffects:[{Id:19,Amplifier:0,Duration:100}]}"
+          }]
+        },
+        {
+        "type": "minecraft:item",
+        "name": "minecraft:splash_potion",
+        "weight": 10,
+        "functions": [
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{CustomPotionEffects:[{Id:25,Amplifier:0,Duration:100}]}"
+          }]
+        },
+        {
+          
+          "type": "minecraft:item",
+          "name": "minecraft:nether_star",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "§c地獄之心",
+                "color": "rad",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag":"{ddy_heart:1b}"
+
+            },
+           {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+              {
+                "text": "收集足夠數量即可反擊",
+                "color": "gray",
+                "italic": false
+              }
+            ],
+            "replace": true
+          }
+            
+          ],
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}
