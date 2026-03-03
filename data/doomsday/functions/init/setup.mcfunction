@@ -8,13 +8,13 @@ scoreboard objectives add ddy_kill_total dummy "{\"text\":\"ddy_kill_total\"}"
 scoreboard objectives add ddy_players dummy "{\"text\":\"§a玩家人數\"}"
 scoreboard objectives add ddy_health health "{\"text\":\"§c生命值\"}"
 scoreboard objectives add ddy_deaths deathCount
-scoreboard objectives add ddy_30s dummy
 scoreboard objectives add ddy_rand dummy
+scoreboard objectives add ddy_chest_tick dummy
 
 
 #profession
 scoreboard objectives add ddy_cd1 dummy
-scoreboard objectives add ddy_use_item minecraft.used:minecra ft.carrot_on_a_stick
+scoreboard objectives add ddy_use_item minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add ddy_damage minecraft.custom:minecraft.damage_dealt
 
 
