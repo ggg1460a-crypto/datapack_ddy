@@ -7,9 +7,9 @@ scoreboard players set @s ddy_kills 0
 
 # Upgrade logic
 # 1 kill -> Stone Sword
-execute if score @s ddy_kill_total matches 1 run function doomsday:game/upgrade_stone
+execute if score @s[tag=ddy_assassin] ddy_kill_total matches 1 run function doomsday:profession_bringer/assassin/weapon_updata1
 # 2 kills -> Iron Sword
-execute if score @s ddy_kill_total matches 2.. run function doomsday:game/upgrade_iron
+execute if score @s[tag=ddy_assassin] ddy_kill_total matches 2.. run function doomsday:profession_bringer/assassin/weapon_updata2
 
 # Message
 tellraw @s "{\"text\":\"§6[末日餘燼] §a擊殺成功！武器威力已提升。\"}"

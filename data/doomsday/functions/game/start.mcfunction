@@ -37,3 +37,4 @@ execute as @a[team=ddy_guard] run title @s subtitle "{\"text\":\"§b躲避追殺
 function doomsday:game/chest_logic
 # Start message
 tellraw @a "{\"text\":\"§6[末日餘燼] §a遊戲正式開始！限時 10 分鐘。\"}"
+function doomsday:game/start_give

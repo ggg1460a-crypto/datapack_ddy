@@ -1,7 +1,6 @@
 # Doomsday Bringer Start
 # Wood sword + Darkness, Weakness, Slowness II for 30s
 clear @s
-give @s wooden_sword{Unbreakable:1b,display:{Name:'{"text":"§4末日之眼","italic":false}'}} 1
 effect give @s darkness 20 0 true
 effect give @s weakness 20 255 true
 effect give @s slowness 20 4 true

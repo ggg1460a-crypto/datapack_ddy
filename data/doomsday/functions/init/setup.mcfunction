@@ -16,6 +16,7 @@ scoreboard objectives add ddy_chest_tick dummy
 scoreboard objectives add ddy_cd1 dummy
 scoreboard objectives add ddy_use_item minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add ddy_damage minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add ddy_useing_ult dummy
 
 
 # Teams
