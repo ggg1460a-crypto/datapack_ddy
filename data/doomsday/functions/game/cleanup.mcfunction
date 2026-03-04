@@ -1,6 +1,6 @@
 # Clear effects, items, and teams
 effect clear @a
-gamemode survival @a[gamemode=spectator]
+gamemode adventure @a[gamemode=spectator]
 clear @a
 team leave @a
 

@@ -10,6 +10,8 @@ scoreboard objectives add ddy_health health "{\"text\":\"§c生命值\"}"
 scoreboard objectives add ddy_deaths deathCount
 scoreboard objectives add ddy_rand dummy
 scoreboard objectives add ddy_chest_tick dummy
+scoreboard objectives add ddy_open_chest dummy
+scoreboard objectives add ddy_open_chest_stat minecraft.custom:minecraft.open_chest
 
 
 #profession

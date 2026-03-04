@@ -20,8 +20,14 @@ scoreboard players set @a[scores={ddy_deaths=1..}] ddy_deaths 0
 # 3. State 0: Waiting for start (handled by admin)
 
 function doomsday:game/heart_check
+
+
 function doomsday:tick_profession
 
+
+#game settings
+execute if score #global ddy_state matches 0 at @e[tag=ddy_chest_set] run function doomsday:game_setting/chest_set_part2
+execute if score #global ddy_state matches 0 at @e[tag=ddy_border_set] run function doomsday:game_setting/border_set_part2
 
 
 
