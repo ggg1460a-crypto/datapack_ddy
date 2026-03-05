@@ -11,4 +11,4 @@ execute if score #global ddy_timer matches ..0 run function doomsday:game/end
 execute if score #global ddy_timer matches 0.. run function doomsday:game/display_timer
 
 # Check Phase Transition: 2 mins left (2400 ticks)
-execute if score #global ddy_state matches 1 if score #global ddy_timer matches ..2400 run function doomsday:game/counter_attack
+execute if score #global ddy_state matches 2 if score #global ddy_timer matches ..2400 run function doomsday:game/counter_attack

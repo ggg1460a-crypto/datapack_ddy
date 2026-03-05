@@ -12,6 +12,7 @@ scoreboard objectives add ddy_rand dummy
 scoreboard objectives add ddy_chest_tick dummy
 scoreboard objectives add ddy_open_chest dummy
 scoreboard objectives add ddy_open_chest_stat minecraft.custom:minecraft.open_chest
+scoreboard objectives add ddy_ready dummy
 
 
 #profession

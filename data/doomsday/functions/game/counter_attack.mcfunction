@@ -1,7 +1,7 @@
 # Counter Attack Phase
 # Triggered by heart collection or 2 mins left
 
-scoreboard players set #global ddy_state 2
+scoreboard players set #global ddy_state 3
 
 # Messages
 title @a title "{\"text\":\"§e餘燼反擊\"}"

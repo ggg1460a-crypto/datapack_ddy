@@ -1,40 +1,28 @@
 # Start the game
 # Called by admin: /function doomsday:game/start
 
-# Reset scores
-scoreboard players set #global ddy_timer 12000
-scoreboard players set #global ddy_state 1
-scoreboard players set #global ddy_hearts 0
-scoreboard players set #global ddy_kill_total 0
+
+
 
 # Count players
 scoreboard players set #global ddy_players 0
 execute as @a[gamemode=!spectator] run scoreboard players add #global ddy_players 1
 
-# Set World Border (Chebyshev Distance 50 = Radius 50 = Total 100)
-execute at @e[tag=ddy_center,limit=1] run worldborder center ~ ~
-worldborder set 100
-
-# Teleport to center (Admin should set a marker named 'ddy_center')
-execute as @a[gamemode=!spectator] at @e[tag=ddy_center,limit=1] run tp @s ~ ~ ~
 
 # Clear items and set teams (Random assignment)
 function doomsday:game/random_teams
 
-# Give items and effects to Doomsday Bringers
-execute as @a[team=ddy_bringer] run function doomsday:game/start_bringer
+execute as @a[team=ddy_bringer] run title @s title {"text":"§4末日使者"}
+tellraw @a[team=ddy_bringer] {"text":"選擇你的職業","color":"red"}
 
-# Give items to guards
-execute as @a[team=ddy_guard] run function doomsday:game/start_guard
+execute as @a[team=ddy_guard] run title @s title {"text":"§9餘燼守衛"}
+tellraw @a[team=ddy_guard] {"text":"選擇你的職業","color":"yellow"}
 
-# Individual team notifications
-execute as @a[team=ddy_bringer] run title @s title "{\"text\":\"§4末日使者\"}"
-execute as @a[team=ddy_bringer] run title @s subtitle "{\"text\":\"§c你的目標是消滅所有守衛！\"}"
+item replace entity @a[team=ddy_bringer] container.0 with paper{display:{Name:'{"text":"丟出物品準備完成"}'},ddy_ready:1b} 1
+item replace entity @a[team=ddy_guard] container.0 with paper{display:{Name:'{"text":"丟出物品準備完成"}'},ddy_ready:1b} 1
+give @a[team=ddy_bringer] written_book{display:{Name:'{"text":"使者之書"}'},pages:['["",{"text":"\\u672b\\u65e5\\u4f7f\\u8005","color":"dark_red","clickEvent":{"action":"run_command","value":"/function doomsday:profession_bringer/dark_bringer/choose_dark_bringer"}},{"text":"\\n\\n","color":"red"},{"text":"\\u6697\\u5f71\\u523a\\u5ba2","color":"dark_red","clickEvent":{"action":"run_command","value":"/function doomsday:profession_bringer/assassin/choose_assassin"}},{"text":"\\n\\n","color":"red"},{"text":"\\u5deb\\u6bd2\\u5973\\u5b69","color":"dark_red","clickEvent":{"action":"run_command","value":"/function doomsday:profession_bringer/witch/choose_witch"}}]'],title:"使者之書",author:"末日餘燼"}
+# Reset scores
 
-execute as @a[team=ddy_guard] run title @s title "{\"text\":\"§9餘燼守衛\"}"
-execute as @a[team=ddy_guard] run title @s subtitle "{\"text\":\"§b躲避追殺並收集地獄之心！\"}"
+scoreboard players set #global ddy_ready 0
+scoreboard players set #global ddy_state 1
 
-function doomsday:game/chest_logic
-# Start message
-tellraw @a "{\"text\":\"§6[末日餘燼] §a遊戲正式開始！限時 10 分鐘。\"}"
-function doomsday:game/start_give
