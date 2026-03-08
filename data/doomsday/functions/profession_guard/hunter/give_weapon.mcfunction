@@ -1,0 +1,1 @@
+give @s bow{ddy_item:4b,item_id:1b,Unbreakable:1b,display:{Name:'{"text":"守護之弓","italic":false,"color":"gold"}'}} 1

@@ -14,7 +14,6 @@ execute if score @s ddy_random matches 5550..6479 run effect give @a[limit=1,sor
 execute if score @s ddy_random matches 6480..7399 run effect give @a[limit=1,sort= random,team=ddy_guard] darkness 5 3 false
 execute if score @s ddy_random matches 7400..8324 run effect give @a[limit=1,sort= random,team=ddy_guard] glowing 5 3 false
 execute if score @s ddy_random matches 8325..9250 run effect give @a[limit=1,sort= random,team=ddy_guard] weakness 5 3 false
-
 execute if score @s ddy_random matches 9251..9999 run tag @a[limit=1,sort= random,team=ddy_guard] add ddy_witch_dead_tag
 
 

@@ -1,7 +1,7 @@
 # Start the game
 # Called by admin: /function doomsday:game/start
 
-
+clear @a
 
 
 # Count players
@@ -18,11 +18,9 @@ tellraw @a[team=ddy_bringer] {"text":"選擇你的職業","color":"red"}
 execute as @a[team=ddy_guard] run title @s title {"text":"§9餘燼守衛"}
 tellraw @a[team=ddy_guard] {"text":"選擇你的職業","color":"yellow"}
 
-item replace entity @a[team=ddy_bringer] container.0 with paper{display:{Name:'{"text":"丟出物品準備完成"}'},ddy_ready:1b} 1
-item replace entity @a[team=ddy_guard] container.0 with paper{display:{Name:'{"text":"丟出物品準備完成"}'},ddy_ready:1b} 1
 
-give @a[team=ddy_bringer] written_book{display:{Name:'{"text":"使者之書"}'},pages:['["",{"text":"\\u672b\\u65e5\\u4f7f\\u8005","color":"dark_red","clickEvent":{"action":"run_command","value":"/function doomsday:profession_bringer/dark_bringer/choose_end_bringer"}},{"text":"\\n\\n","color":"red"},{"text":"\\u6697\\u5f71\\u523a\\u5ba2","color":"dark_red","clickEvent":{"action":"run_command","value":"/function doomsday:profession_bringer/assassin/choose_assassin"}},{"text":"\\n\\n","color":"red"},{"text":"\\u5deb\\u6bd2\\u5973\\u5b69","color":"dark_red","clickEvent":{"action":"run_command","value":"/function doomsday:profession_bringer/witch/choose_witch"}}]'],title:"使者之書",author:"末日餘燼"}
-give @a[team=ddy_guard] written_book{display:{Name:'{"text":"使者之書"}'},pages:['["",{"text":"\\u9918\\u71fc\\u5b88\\u885b","color":"gold","clickEvent":{"action":"run_command","value":"/function doomsday:profession_guard/ember_guard/choose_ember_guard"}},{"text":"\\n\\n\\n","color":"red"},{"text":"\\u52c7\\u8005\\n\\n\\n\\u7375\\u4eba","color":"gold","clickEvent":{"action":"run_command","value":"/function doomsday:profession_guard/hunter/choose_hunter"}},{"text":"\\n\\n ","color":"red"}]'],title:"使者之書",author:"末日餘燼"}
+give @a[team=ddy_bringer] written_book{ddy_profession_book:1b,display:{Name:'{"text":"使者之書"}'},pages:['["",{"text":"\\u672b\\u65e5\\u4f7f\\u8005","color":"dark_red","clickEvent":{"action":"run_command","value":"/function doomsday:profession_bringer/end_bringer/choose_end_bringer"}},{"text":"\\n\\n","color":"red"},{"text":"\\u6697\\u5f71\\u523a\\u5ba2","color":"dark_red","clickEvent":{"action":"run_command","value":"/function doomsday:profession_bringer/assassin/choose_assassin"}},{"text":"\\n\\n","color":"red"},{"text":"\\u5deb\\u6bd2\\u5973\\u5b69","color":"dark_red","clickEvent":{"action":"run_command","value":"/function doomsday:profession_bringer/witch/choose_witch"}}]'],title:"使者之書",author:"末日餘燼"}
+give @a[team=ddy_guard] written_book{ddy_profession_book:1b,display:{Name:'{"text":"使者之書"}'},pages:['["",{"text":"\\u9918\\u71fc\\u5b88\\u885b","color":"gold","clickEvent":{"action":"run_command","value":"/function doomsday:profession_guard/ember_guard/choose_ember_guard"}},{"text":"\\n\\n\\n","color":"red"},{"text":"\\u52c7\\u8005\\n\\n\\n\\u7375\\u4eba","color":"gold","clickEvent":{"action":"run_command","value":"/function doomsday:profession_guard/hunter/choose_hunter"}},{"text":"\\n\\n ","color":"red"}]'],title:"使者之書",author:"末日餘燼"}
 # Reset scores
 
 scoreboard players set #global ddy_ready 0

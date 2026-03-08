@@ -11,7 +11,12 @@ execute if score #global ddy_state matches 2..3 if score #global ddy_chest_tick 
 execute if score #global ddy_state matches 2..3 if score #global ddy_chest_tick matches 600.. run scoreboard players set #global ddy_chest_tick 0
 
 # 3. Kill detection
-execute as @a[team=ddy_bringer,scores={ddy_kills=1..}] at @s run function doomsday:game/kill_listener
+execute as @a[team=ddy_bringer,scores={ddy_kills=1..}] at @s run scoreboard players add @s ddy_kill_total 1
+
+execute as @a[team=ddy_bringer,scores={ddy_kills=1..}] at @s run scoreboard players set @s ddy_kills 0
+
+execute as @a[team=ddy_bringer] run function doomsday:game/kill_listener
+
 
 # 4. Death detection
 execute as @a[gamemode=!spectator,scores={ddy_deaths=1..}] run function doomsday:game/player_death
@@ -33,6 +38,8 @@ execute if score #global ddy_state matches 0 at @e[tag=ddy_border_set] run funct
 
 
 execute if score #global ddy_state matches 1 as @e[nbt={Item:{tag:{ddy_ready:1b}}}] run scoreboard players add #global ddy_ready 1
+execute if score #global ddy_state matches 1 as @e[nbt={Item:{tag:{ddy_ready:1b}}}] at @s run clear @p written_book{ddy_profession_book:1b} 1
+
 execute if score #global ddy_state matches 1 as @e[nbt={Item:{tag:{ddy_ready:1b}}}] run kill @s
 execute if score #global ddy_state matches 1 if score #global ddy_ready = #global ddy_players run function doomsday:game/start_2
 

@@ -20,10 +20,11 @@ scoreboard objectives add ddy_cd1 dummy
 scoreboard objectives add ddy_use_item minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add ddy_damage minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add ddy_cd2 dummy
-scoreboard objectives add ddy_damage2 dummy
+scoreboard objectives add ddy_damage2 minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add ddy_random dummy
 scoreboard objectives add ddy_witch_tag_count dummy
 scoreboard objectives add ddy_witch_dead_tag dummy
+scoreboard objectives add ddy_jump_count minecraft.custom:minecraft.jump
 
 
 
