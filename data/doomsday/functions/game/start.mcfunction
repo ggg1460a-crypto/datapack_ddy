@@ -26,3 +26,6 @@ give @a[team=ddy_guard] written_book{ddy_profession_book:1b,display:{Name:'{"tex
 scoreboard players set #global ddy_ready 0
 scoreboard players set #global ddy_state 1
 
+scoreboard players set @a ddy_damage2 0
+
+

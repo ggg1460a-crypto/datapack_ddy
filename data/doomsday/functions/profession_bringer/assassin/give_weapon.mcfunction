@@ -1,2 +1,2 @@
 #給予玩家名為刺客小刀的木劍，有ddy_item:4b,item_id:1b的NBT標籤
-give @s wooden_sword{ddy_item:4b,item_id:1b,display:{Name:'{"text":"刺客小刀","italic":false,"color":"dark_red"}'}} 1
+give @s wooden_sword{Unbreakable:1b,ddy_item:4b,item_id:1b,display:{Name:'{"text":"刺客小刀","italic":false,"color":"dark_red"}',Lore:['{"text": "擊殺一名守衛可升即","italic":false,"color": "white"}']}} 1

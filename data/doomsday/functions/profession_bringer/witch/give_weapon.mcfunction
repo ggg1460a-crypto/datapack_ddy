@@ -1,2 +1,2 @@
 #給予玩家名為的骨針的釣竿，有ddy_item:4b,item_id:1b的NBT標籤
-give @s fishing_rod{ddy_item:4b,item_id:1b,display:{Name:'{"text":"骨針","italic":false,"color":"dark_red"}'}} 1
+give @s fishing_rod{Unbreakable:1b,ddy_item:4b,item_id:1b,display:{Name:'{"text":"骨針","italic":false,"color":"dark_red"}',Lore:['{"text": "標記一人獲得隨機負面效果","italic":false,"color": "white"}','{"text": "有2.5%的機率附上死亡標記","italic":false,"color": "dark_purple"}','{"text": "累積標記20次升級","italic":false,"color": "white"}']}} 1

@@ -1,2 +1,2 @@
 #給予玩家名為，末日鐮有ddy_item:4b,item_id:1b的NBT標籤
-give @s iron_hoe{ddy_item:4b,item_id:1b,display:{Name:'{"text":"末日鐮","italic":false,"color":"dark_red"}'}} 1
+give @s iron_hoe{Unbreakable:1b,ddy_item:4b,item_id:1b,display:{Name:'{"text":"末日鐮","italic":false,"color":"dark_red"}',Lore:['{"text": "可給予攻擊到的守衛緩速","italic":false,"color": "dark_purple"}','{"text": "累積造成傷害到達120可升級","italic":false,"color": "white"}']}} 1

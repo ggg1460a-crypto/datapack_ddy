@@ -1,2 +1,2 @@
 #給予玩家名稱為巫毒標記的釣竿，有ddy_item:1b,item_id:1b的NBT標籤
-give @s fishing_rod{ddy_item:1b,item_id:1b,display:{Name:'{"text":"巫毒標記","italic":false,"color":"dark_purple"}'}} 1
+give @s fishing_rod{Unbreakable:1b,ddy_item:1b,item_id:1b,display:{Name:'{"text":"巫毒標記","italic":false,"color":"dark_purple"}',Lore:['{"text": "標記一人，使其獲得發光30秒","italic":false,"color": "white"}']}} 1
