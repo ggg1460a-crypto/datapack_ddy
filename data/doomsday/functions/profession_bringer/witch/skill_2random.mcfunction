@@ -17,11 +17,7 @@ execute if score @s ddy_random matches 8325..9250 run effect give @a[limit=1,sor
 execute if score @s ddy_random matches 9251..9999 run tag @a[limit=1,sort= random,team=ddy_guard] add ddy_witch_dead_tag
 
 
-execute run scoreboard players add @a[tag=ddy_witch_dead_tag,team=ddy_guard] ddy_witch_dead_tag 1
 execute if score @s ddy_random matches 9251..9999 run tellraw @s {"text": "玩家已被標上死亡標記","color":"dark_red"}
-execute run tellraw @a[tag=ddy_witch_dead_tag,team=ddy_guard] {"text":"你已被標上了死亡標記，擁有三次立即死亡！","color":"dark_red"}
-playsound minecraft:entity.witch.hurt master @a[tag=ddy_witch_dead_tag] ~ ~ ~ 1 0.5
-tag @a[tag=ddy_witch_dead_tag] remove ddy_witch_dead_tag
 
 playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 0.5
 

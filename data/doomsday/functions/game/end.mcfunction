@@ -22,7 +22,9 @@ execute if score #count_guard ddy_state > #count_bringer ddy_state run function 
 execute if score #count_bringer ddy_state = #count_guard ddy_state run function doomsday:game/win_draw
 
 execute as @a run function doomsday:clear_profession_tag
-
+scoreboard players set @a ddy_number 0
 
 kill @e[tag=ddy_hunter_skill2]
 kill @e[tag=had_ddy_hunter_skill3]
+
+tag @a remove ddy_end_bringer_skill3

@@ -13,6 +13,7 @@ scoreboard objectives add ddy_chest_tick dummy
 scoreboard objectives add ddy_open_chest dummy
 scoreboard objectives add ddy_open_chest_stat minecraft.custom:minecraft.open_chest
 scoreboard objectives add ddy_ready dummy
+scoreboard objectives add ddy_number dummy
 
 
 #profession
@@ -21,10 +22,12 @@ scoreboard objectives add ddy_use_item minecraft.used:minecraft.carrot_on_a_stic
 scoreboard objectives add ddy_damage minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add ddy_cd2 dummy
 scoreboard objectives add ddy_damage2 minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add ddY_damage_instant minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add ddy_random dummy
 scoreboard objectives add ddy_witch_tag_count dummy
 scoreboard objectives add ddy_witch_dead_tag dummy
 scoreboard objectives add ddy_jump_count minecraft.custom:minecraft.jump
+scoreboard objectives add ddy_ray_time dummy
 
 
 
